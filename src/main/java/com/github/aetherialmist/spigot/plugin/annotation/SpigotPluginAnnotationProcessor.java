@@ -1,12 +1,12 @@
-package aetherial.spigot.plugin.annotation;
+package com.github.aetherialmist.spigot.plugin.annotation;
 
-import aetherial.spigot.plugin.annotation.command.CommandTag;
-import aetherial.spigot.plugin.annotation.command.CommandsTag;
-import aetherial.spigot.plugin.annotation.permission.ChildPermission;
-import aetherial.spigot.plugin.annotation.permission.ChildPermissions;
-import aetherial.spigot.plugin.annotation.permission.PermissionTag;
-import aetherial.spigot.plugin.annotation.permission.PermissionsTag;
-import aetherial.spigot.plugin.annotation.plugin.*;
+import com.github.aetherialmist.spigot.plugin.annotation.command.CommandTag;
+import com.github.aetherialmist.spigot.plugin.annotation.command.CommandsTag;
+import com.github.aetherialmist.spigot.plugin.annotation.permission.ChildPermission;
+import com.github.aetherialmist.spigot.plugin.annotation.permission.ChildPermissions;
+import com.github.aetherialmist.spigot.plugin.annotation.permission.PermissionTag;
+import com.github.aetherialmist.spigot.plugin.annotation.permission.PermissionsTag;
+import com.github.aetherialmist.spigot.plugin.annotation.plugin.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -27,7 +27,10 @@ import java.lang.annotation.Annotation;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-@SupportedAnnotationTypes("aetherial.spigot.plugin.annotation.*")
+/**
+ * Processes the {@link Annotation}s defined in this project
+ */
+@SupportedAnnotationTypes("com.github.annotation.*")
 @SupportedSourceVersion(SourceVersion.RELEASE_17)
 public class SpigotPluginAnnotationProcessor extends AbstractProcessor {
 

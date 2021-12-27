@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation.permission;
+package com.github.aetherialmist.spigot.plugin.annotation.permission;
 
 import java.lang.annotation.*;
 
@@ -12,6 +12,11 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PermissionsTag {
 
+    /**
+     * The {@link PermissionTag}s appearing on the same {@link javax.lang.model.element.Element}
+     *
+     * @return The PermissionsTags
+     */
     PermissionTag[] value() default {};
 
 }

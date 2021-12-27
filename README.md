@@ -22,7 +22,10 @@ Add the following to your POM
 ```xml
 <project>
     <repositories>
-        <!-- Pull GitHub releases as a dependency -->
+        <!--
+        Pull GitHub releases as a dependency
+        Website: https://jitpack.io/
+        -->
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
@@ -30,7 +33,10 @@ Add the following to your POM
     </repositories>
     
     <dependencies>
-        <!-- Spigot plugin.yml Annotations -->
+        <!--
+        Spigot plugin.yml Annotations
+        GitHub: https://github.com/AetherialMist/SpigotPluginAnnotations
+        -->
         <dependency>
             <groupId>com.github.AetherialMist</groupId>
             <artifactId>SpigotPluginAnnotations</artifactId>

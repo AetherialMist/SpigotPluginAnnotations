@@ -11,13 +11,17 @@
     <packaging>jar</packaging>
 
     <properties>
-        <revision>1.0.3</revision>
+        <revision>1.1.0-SNAPSHOT</revision>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <repositories>
+        <!--
+        Minecraft Plugin API Repository
+        https://papermc.io/using-the-api
+        -->
         <repository>
             <id>papermc</id>
             <url>https://papermc.io/repo/repository/maven-public/</url>
@@ -25,21 +29,34 @@
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.30</version>
-        </dependency>
+        <!--
+        Minecraft Plugin API
+        Website: https://papermc.io
+        Maven: https://papermc.io/using-the-api
+        JavaDoc: https://papermc.io/javadocs/paper/1.18/
+        -->
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>1.18.1-R0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--
+        Read and Write YAML files
+        Maven: https://mvnrepository.com/artifact/org.yaml/snakeyaml
+        Docs: https://bitbucket.org/snakeyaml/snakeyaml/wiki/Documentation
+        -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.30</version>
         </dependency>
     </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
+            <!-- For some reason the version was not being included in the final jar file -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -53,8 +70,24 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
+                    <!-- Disable Annotation processing for this project -->
                     <!-- https://stackoverflow.com/questions/26817884/netbeans-and-bad-service-configuration-file-or-exception-thrown-while-construct#28893071 -->
                     <compilerArgument>-proc:none</compilerArgument>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <failOnWarnings>true</failOnWarnings>
                 </configuration>
             </plugin>
         </plugins>

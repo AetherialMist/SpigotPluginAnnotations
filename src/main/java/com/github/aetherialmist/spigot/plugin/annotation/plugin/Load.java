@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation.plugin;
+package com.github.aetherialmist.spigot.plugin.annotation.plugin;
 
 import java.lang.annotation.*;
 
@@ -12,12 +12,27 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 public @interface Load {
 
+    /**
+     * @return When this plugin should be loaded
+     */
     LoadType value() default LoadType.POST_WORLD;
 
+    /**
+     * When this plugin should be loaded
+     */
     @SuppressWarnings("unused")
     enum LoadType {
+        /**
+         * Use the default value for Spigot plugins
+         */
         DEFAULT(null),
+        /**
+         * Before the world is loaded
+         */
         STARTUP("STARTUP"),
+        /**
+         * After the world is loaded
+         */
         POST_WORLD("POSTWORLD");
 
         private final String loadTypeValue;
@@ -26,8 +41,12 @@ public @interface Load {
             this.loadTypeValue = version;
         }
 
+        /**
+         * @return The String version of this LoadType
+         */
         public String getLoadType() {
             return loadTypeValue;
         }
     }
+
 }

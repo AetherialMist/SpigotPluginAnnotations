@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation;
+package com.github.aetherialmist.spigot.plugin.annotation;
 
 import java.lang.annotation.Annotation;
 

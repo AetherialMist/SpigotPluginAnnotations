@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation.plugin;
+package com.github.aetherialmist.spigot.plugin.annotation.plugin;
 
 import java.lang.annotation.*;
 
@@ -12,6 +12,9 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 public @interface LoadBefore {
 
+    /**
+     * @return Plugins that should be loaded after this plugin is loaded
+     */
     String[] value() default {};
 
 }

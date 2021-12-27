@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation;
+package com.github.aetherialmist.spigot.plugin.annotation;
 
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;

@@ -1,4 +1,4 @@
-package aetherial.spigot.plugin.annotation.permission;
+package com.github.aetherialmist.spigot.plugin.annotation.permission;
 
 
 import java.lang.annotation.*;
@@ -13,6 +13,11 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ChildPermissions {
 
+    /**
+     * The {@link ChildPermission}s appearing on the same {@link javax.lang.model.element.Element}
+     *
+     * @return The ChildPermissions
+     */
     ChildPermission[] value() default {};
 
 }
