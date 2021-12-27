@@ -30,7 +30,7 @@ Add the following to your POM
     </repositories>
     
     <dependencies>
-        <!-- Basic Logging Support -->
+        <!-- Spigot plugin.yml Annotations -->
         <dependency>
             <groupId>com.github.AetherialMist</groupId>
             <artifactId>SpigotPluginAnnotations</artifactId>
