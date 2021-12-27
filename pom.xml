@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.aetherialmist</groupId>
-    <artifactId>spigot-plugin-annotations</artifactId>
+    <artifactId>SpigotPluginAnnotations</artifactId>
     <name>AetherialMist :: Spigot Plugin.yml Annotations</name>
     <version>${revision}</version>
     <packaging>jar</packaging>
