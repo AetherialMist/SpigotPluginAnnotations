@@ -14,3 +14,28 @@ Since I did use their codebase as a starting point to understand what annotation
 processed, I have included their MIT code license in this module.
 
 The Spigot team's source code can be found here: https://hub.spigotmc.org/stash/projects/SPIGOT/repos/plugin-annotations/browse
+
+## How to include in your project
+
+Add the following to your POM
+
+```xml
+<project>
+    <repositories>
+        <!-- Pull GitHub releases as a dependency -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+        <!-- Basic Logging Support -->
+        <dependency>
+            <groupId>com.github.AetherialMist</groupId>
+            <artifactId>SpigotPluginAnnotations</artifactId>
+            <version>RELEASE_VERSION</version>
+        </dependency>
+    </dependencies>
+</project>
+```
